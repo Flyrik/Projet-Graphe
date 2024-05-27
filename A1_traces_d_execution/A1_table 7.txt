@@ -1,0 +1,80 @@
+table 7.txt
+   0 1 2 3 4 5 6 7 8 9 10 11 
+0  * * * * * * * * * *  *  *
+1  * * * * * * * * * 9  *  *
+2  * * * * * * * * * *  *  *
+3  * * * * * * * * * 9  *  *
+4  * 1 * * * 5 * * * *  *  *
+5  * * * * * * * * 8 *  *  *
+6  * * * 3 * * * * * *  10  *
+7  * * 2 * * * * * 8 *  *  *
+8  * * * * * * * * * 9  *  *
+9  * * * * * * * * * *  *  *
+10 * 1 * * * * * * * *  *  * 
+11 * * * * * * * * * *  *  *
+
+La matrice ne comporte aucun circuit, ni arc négatif on peut donc faire un Graphe d'ordonnancement
+Nous pouvons procéder au calcul des rangs :
+Tache: 0, Rang : 0
+Tache: 1, Rang : 3
+Tache: 2, Rang : 2
+Tache: 3, Rang : 2
+Tache: 4, Rang : 1
+Tache: 5, Rang : 2
+Tache: 6, Rang : 1
+Tache: 7, Rang : 1
+Tache: 8, Rang : 3
+Tache: 9, Rang : 4
+Tache: 10, Rang : 2
+Tache: 11, Rang : 5
+
+Calendrier plus tôt
+Tache: 0, Date au plus tôt : 0
+Tache: 1, Date au plus tôt : 16
+Tache: 2, Date au plus tôt : 7
+Tache: 3, Date au plus tôt : 6
+Tache: 4, Date au plus tôt : 0
+Tache: 5, Date au plus tôt : 4
+Tache: 6, Date au plus tôt : 0
+Tache: 7, Date au plus tôt : 0
+Tache: 8, Date au plus tôt : 9
+Tache: 9, Date au plus tôt : 17
+Tache: 10, Date au plus tôt : 6
+Tache: 11, Date au plus tôt : 26
+
+Calendrier plus tard
+Tache: 0, Date au plus tard : 0
+Tache: 1, Date au plus tard : 16
+Tache: 2, Date au plus tard : 24
+Tache: 3, Date au plus tard : 14
+Tache: 4, Date au plus tard : 0
+Tache: 5, Date au plus tard : 4
+Tache: 6, Date au plus tard : 0
+Tache: 7, Date au plus tard : 2
+Tache: 8, Date au plus tard : 9
+Tache: 9, Date au plus tard : 17
+Tache: 10, Date au plus tard : 6
+Tache: 11, Date au plus tard : 26
+
+Marges totales
+Tache: 0, Marge : 0
+Tache: 1, Marge : 0
+Tache: 2, Marge : 17
+Tache: 3, Marge : 8
+Tache: 4, Marge : 0
+Tache: 5, Marge : 0
+Tache: 6, Marge : 0
+Tache: 7, Marge : 2
+Tache: 8, Marge : 0
+Tache: 9, Marge : 0
+Tache: 10, Marge : 0
+Tache: 11, Marge : 0
+
+Voici le(s) chemin(s) critiques de ce graphe :
+0 --> 4 --> 1 --> 9 --> 11
+
+0 --> 4 --> 5 --> 8 --> 9 --> 11
+
+0 --> 6 --> 10 --> 1 --> 9 --> 11
+
+0 --> 7 --> 8 --> 9 --> 11

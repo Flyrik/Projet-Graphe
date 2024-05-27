@@ -1,0 +1,103 @@
+table 2.txt
+   0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 
+0  * * * * * * * * * *  *  *  *  *  * 
+1  * * * 4 * * 2 * * *  *  *  *  *  * 
+2  * * * * * * 2 * * *  *  *  *  *  * 
+3  * * * * 1 * * * * *  *  *  *  *  * 
+4  * * * * * 9 * * * *  *  *  *  *  * 
+5  * * * * * * * * * *  *  *  *  *  * 
+6  * * * * * 9 * 5 * *  *  19  *  1  * 
+7  * * * * * * * * 5 *  *  *  5  *  * 
+8  * * * * * 9 * * * 9  *  *  5  *  * 
+9  * * * * * * * * * *  2  *  5  *  * 
+10 * * * * * * * * * *  *  *  5  *  * 
+11 * * * * * * * * * *  *  *  *  1  * 
+12 * * * * * * * * * *  *  *  *  *  * 
+13 * * * * * * * * * *  *  *  *  *  * 
+14 * * * * * * * * * *  *  *  *  *  * 
+
+La matrice ne comporte aucun circuit, ni arc négatif on peut donc faire un Graphe d'ordonnancement
+Nous pouvons procéder au calcul des rangs :
+Tache: 0, Rang : 0
+Tache: 1, Rang : 1
+Tache: 2, Rang : 1
+Tache: 3, Rang : 2
+Tache: 4, Rang : 3
+Tache: 5, Rang : 5
+Tache: 6, Rang : 2
+Tache: 7, Rang : 3
+Tache: 8, Rang : 4
+Tache: 9, Rang : 5
+Tache: 10, Rang : 6
+Tache: 11, Rang : 3
+Tache: 12, Rang : 7
+Tache: 13, Rang : 4
+Tache: 14, Rang : 8
+
+Calendrier plus tôt
+Tache: 0, Date au plus tôt : 0
+Tache: 1, Date au plus tôt : 0
+Tache: 2, Date au plus tôt : 0
+Tache: 3, Date au plus tôt : 2
+Tache: 4, Date au plus tôt : 6
+Tache: 5, Date au plus tôt : 17
+Tache: 6, Date au plus tôt : 5
+Tache: 7, Date au plus tôt : 7
+Tache: 8, Date au plus tôt : 12
+Tache: 9, Date au plus tôt : 17
+Tache: 10, Date au plus tôt : 26
+Tache: 11, Date au plus tôt : 7
+Tache: 12, Date au plus tôt : 28
+Tache: 13, Date au plus tôt : 26
+Tache: 14, Date au plus tôt : 33
+
+Calendrier plus tard
+Tache: 0, Date au plus tard : 0
+Tache: 1, Date au plus tard : 3
+Tache: 2, Date au plus tard : 0
+Tache: 3, Date au plus tard : 19
+Tache: 4, Date au plus tard : 23
+Tache: 5, Date au plus tard : 24
+Tache: 6, Date au plus tard : 5
+Tache: 7, Date au plus tard : 7
+Tache: 8, Date au plus tard : 12
+Tache: 9, Date au plus tard : 17
+Tache: 10, Date au plus tard : 26
+Tache: 11, Date au plus tard : 13
+Tache: 12, Date au plus tard : 28
+Tache: 13, Date au plus tard : 32
+Tache: 14, Date au plus tard : 33
+
+Marges totales
+Tache: 0, Marge : 0
+Tache: 1, Marge : 3
+Tache: 2, Marge : 0
+Tache: 3, Marge : 17
+Tache: 4, Marge : 17
+Tache: 5, Marge : 7
+Tache: 6, Marge : 0
+Tache: 7, Marge : 0
+Tache: 8, Marge : 0
+Tache: 9, Marge : 0
+Tache: 10, Marge : 0
+Tache: 11, Marge : 6
+Tache: 12, Marge : 0
+Tache: 13, Marge : 6
+Tache: 14, Marge : 0
+
+Voici le(s) chemin(s) critiques de ce graphe :
+0 --> 2 --> 6 --> 7 --> 12 --> 14
+
+0 --> 1 --> 6 --> 7 --> 12 --> 14
+
+0 --> 2 --> 6 --> 7 --> 8 --> 12 --> 14
+
+0 --> 1 --> 6 --> 7 --> 8 --> 12 --> 14
+
+0 --> 2 --> 6 --> 7 --> 8 --> 9 --> 10 --> 12 --> 14
+
+0 --> 2 --> 6 --> 7 --> 8 --> 9 --> 12 --> 14
+
+0 --> 1 --> 6 --> 7 --> 8 --> 9 --> 10 --> 12 --> 14
+
+0 --> 1 --> 6 --> 7 --> 8 --> 9 --> 12 --> 14

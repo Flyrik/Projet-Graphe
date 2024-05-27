@@ -1,0 +1,48 @@
+table 14.txt
+   0 1 2 3 4 5
+0  * * * * * *
+1  * * * 4 * * 
+2  * * * 4 1 *
+3  * * * * * *
+4  * * * 4 * *
+5  * * * * * *
+
+La matrice ne comporte aucun circuit, ni arc négatif on peut donc faire un Graphe d'ordonnancement
+Nous pouvons procéder au calcul des rangs :
+Tache: 0, Rang : 0
+Tache: 1, Rang : 1
+Tache: 2, Rang : 1
+Tache: 3, Rang : 3
+Tache: 4, Rang : 2
+Tache: 5, Rang : 4
+
+Calendrier plus tôt
+Tache: 0, Date au plus tôt : 0
+Tache: 1, Date au plus tôt : 0
+Tache: 2, Date au plus tôt : 0
+Tache: 3, Date au plus tôt : 3
+Tache: 4, Date au plus tôt : 2
+Tache: 5, Date au plus tôt : 7
+
+Calendrier plus tard
+Tache: 0, Date au plus tard : 0
+Tache: 1, Date au plus tard : 0
+Tache: 2, Date au plus tard : 0
+Tache: 3, Date au plus tard : 3
+Tache: 4, Date au plus tard : 2
+Tache: 5, Date au plus tard : 7
+
+Marges totales
+Tache: 0, Marge : 0
+Tache: 1, Marge : 0
+Tache: 2, Marge : 0
+Tache: 3, Marge : 0
+Tache: 4, Marge : 0
+Tache: 5, Marge : 0
+
+Voici le(s) chemin(s) critiques de ce graphe :
+0 --> 1 --> 3 --> 5
+
+0 --> 2 --> 3 --> 5
+
+0 --> 2 --> 4 --> 3 --> 5

@@ -1,0 +1,76 @@
+table 8.txt
+   0 1 2 3 4 5 6 7 8 9 10 11
+0  * * * * * * * * * *  *  *
+1  * * * * * * * * * 9  *  *
+2  * * * * * * * * * 9  *  *
+3  * * * * * * * * * 9  *  * 
+4  * 1 * * * * * * * *  *  *
+5  * 1 * * * * * * 9 *  *  *
+6  * * * 3 * * * * * *  *  *
+7  * * 2 * * * * * 9 *  *  *
+8  * * * * * * * * * 9  *  *
+9  * * * * * * * * * *  *  *
+10 * 1 * 3 * * * * * *  *  *
+11 * * * * * * * * * *  *  *
+
+La matrice ne comporte aucun circuit, ni arc négatif on peut donc faire un Graphe d'ordonnancement
+Nous pouvons procéder au calcul des rangs :
+Tache: 0, Rang : 0
+Tache: 1, Rang : 2
+Tache: 2, Rang : 2
+Tache: 3, Rang : 2
+Tache: 4, Rang : 1
+Tache: 5, Rang : 1
+Tache: 6, Rang : 1
+Tache: 7, Rang : 1
+Tache: 8, Rang : 2
+Tache: 9, Rang : 3
+Tache: 10, Rang : 1
+Tache: 11, Rang : 4
+
+Calendrier plus tôt
+Tache: 0, Date au plus tôt : 0
+Tache: 1, Date au plus tôt : 10
+Tache: 2, Date au plus tôt : 7
+Tache: 3, Date au plus tôt : 10
+Tache: 4, Date au plus tôt : 0
+Tache: 5, Date au plus tôt : 0
+Tache: 6, Date au plus tôt : 0
+Tache: 7, Date au plus tôt : 0
+Tache: 8, Date au plus tôt : 7
+Tache: 9, Date au plus tôt : 16
+Tache: 10, Date au plus tôt : 0
+Tache: 11, Date au plus tôt : 25
+
+Calendrier plus tard
+Tache: 0, Date au plus tard : 0
+Tache: 1, Date au plus tard : 15
+Tache: 2, Date au plus tard : 14
+Tache: 3, Date au plus tard : 13
+Tache: 4, Date au plus tard : 11
+Tache: 5, Date au plus tard : 2
+Tache: 6, Date au plus tard : 7
+Tache: 7, Date au plus tard : 0
+Tache: 8, Date au plus tard : 7
+Tache: 9, Date au plus tard : 16
+Tache: 10, Date au plus tard : 3
+Tache: 11, Date au plus tard : 25
+
+Marges totales
+Tache: 0, Marge : 0
+Tache: 1, Marge : 5
+Tache: 2, Marge : 7
+Tache: 3, Marge : 3
+Tache: 4, Marge : 11
+Tache: 5, Marge : 2
+Tache: 6, Marge : 7
+Tache: 7, Marge : 0
+Tache: 8, Marge : 0
+Tache: 9, Marge : 0
+Tache: 10, Marge : 3
+Tache: 11, Marge : 0
+
+Voici le(s) chemin(s) critiques de ce graphe :
+0 --> 5 --> 8 --> 9 --> 11
+
+0 --> 7 --> 8 --> 9 --> 11

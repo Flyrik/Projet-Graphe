@@ -1,0 +1,79 @@
+table 4.txt
+   0 1 2 3 4 5 6 7 8 9 10 11 12 
+0  * * * * * * * * * *  *  *  *
+1  * * * * 5 * * * * *  *  *  *
+2  * * * 3 * * * * * *  *  *  *
+3  * * * * * * * * * *  1  *  *
+4  * * * * * 4 * 2 * 5  *  *  *
+5  * * * * * * 2 * 4 *  *  *  *
+6  * * * * * * * * * *  *  2  *
+7  * * * * * * * * 4 *  *  *  *
+8  * * * * * * * * * *  *  2  *
+9  * * * * * * * * * *  1  *  * 
+10 * * * * * * * * * *  *  *  *
+11 * * * * * * * * * *  *  *  *
+12 * * * * * * * * * *  *  *  *
+
+La matrice ne comporte aucun circuit, ni arc négatif on peut donc faire un Graphe d'ordonnancement
+Nous pouvons procéder au calcul des rangs :
+Tache: 0, Rang : 0
+Tache: 1, Rang : 1
+Tache: 2, Rang : 1
+Tache: 3, Rang : 2
+Tache: 4, Rang : 2
+Tache: 5, Rang : 3
+Tache: 6, Rang : 4
+Tache: 7, Rang : 3
+Tache: 8, Rang : 4
+Tache: 9, Rang : 3
+Tache: 10, Rang : 4
+Tache: 11, Rang : 5
+Tache: 12, Rang : 6
+
+Calendrier plus tôt
+Tache: 0, Date au plus tôt : 0
+Tache: 1, Date au plus tôt : 0
+Tache: 2, Date au plus tôt : 0
+Tache: 3, Date au plus tôt : 2
+Tache: 4, Date au plus tôt : 3
+Tache: 5, Date au plus tôt : 8
+Tache: 6, Date au plus tôt : 12
+Tache: 7, Date au plus tôt : 8
+Tache: 8, Date au plus tôt : 12
+Tache: 9, Date au plus tôt : 8
+Tache: 10, Date au plus tôt : 13
+Tache: 11, Date au plus tôt : 16
+Tache: 12, Date au plus tôt : 18
+
+Calendrier plus tard
+Tache: 0, Date au plus tard : 0
+Tache: 1, Date au plus tard : 0
+Tache: 2, Date au plus tard : 12
+Tache: 3, Date au plus tard : 14
+Tache: 4, Date au plus tard : 3
+Tache: 5, Date au plus tard : 8
+Tache: 6, Date au plus tard : 14
+Tache: 7, Date au plus tard : 10
+Tache: 8, Date au plus tard : 12
+Tache: 9, Date au plus tard : 12
+Tache: 10, Date au plus tard : 17
+Tache: 11, Date au plus tard : 16
+Tache: 12, Date au plus tard : 18
+
+Marges totales
+Tache: 0, Marge : 0
+Tache: 1, Marge : 0
+Tache: 2, Marge : 12
+Tache: 3, Marge : 12
+Tache: 4, Marge : 0
+Tache: 5, Marge : 0
+Tache: 6, Marge : 2
+Tache: 7, Marge : 2
+Tache: 8, Marge : 0
+Tache: 9, Marge : 4
+Tache: 10, Marge : 4
+Tache: 11, Marge : 0
+Tache: 12, Marge : 0
+
+Voici le(s) chemin(s) critiques de ce graphe :
+0 --> 1 --> 4 --> 5 --> 8 --> 11 --> 12
